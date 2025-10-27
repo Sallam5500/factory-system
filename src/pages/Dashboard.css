@@ -1,0 +1,53 @@
+.dashboard-page {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #002f4b, #005f73);
+  min-height: 100vh;
+  color: #fff;
+}
+
+.dashboard-title {
+  font-size: 36px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 كروت في الصف */
+  gap: 40px; /* مسافة بين الكروت */
+  max-width: 1200px; /* زودنا العرض شوية */
+  margin: 0 auto;
+}
+
+.section-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 25px;
+  padding: 50px 30px; /* كبرنا الكارت */
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  min-height: 220px; /* ارتفاع أكبر للكارت */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-card:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.icon {
+  font-size: 65px; /* كبرنا الأيقونة */
+  margin-bottom: 20px;
+}
+
+.section-card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}

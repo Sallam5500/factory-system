@@ -1,0 +1,179 @@
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  border: none;
+  color: red;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.back-button:hover {
+  transform: scale(1.1);
+}
+
+.back-icon {
+  color: red;
+  font-size: 26px;
+}
+.page-title{
+    text-align: center;
+}
+/* الصفحة الرئيسية للمخزن */
+.factory-page {
+  padding: 20px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  background: #f0f8ff; /* خلفية فاتحة لطيفة */
+  min-height: 100vh;
+}
+
+/* عنوان الصفحة */
+.page-title {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* فورم إضافة صنف جديد */
+.add-item-form,
+.search-box {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.add-item-form input,
+.search-box input {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* زر الإضافة */
+.add-button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-button:hover {
+  background-color: #005fa3;
+}
+
+/* جدول المخزن */
+.styled-table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table th,
+.styled-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.styled-table th {
+  background-color: #0077cc;
+  color: white;
+  text-transform: uppercase;
+}
+
+.styled-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* الصفوف منخفضة الكمية */
+.styled-table tr.low-quantity {
+  background-color: #ff9999 !important;
+}
+
+/* أزرار التعديل والحذف */
+.edit-button,
+.delete-button {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 2px;
+  transition: 0.3s;
+}
+
+.edit-button {
+  background-color: #ffcc00;
+}
+
+.edit-button:hover {
+  background-color: #e6b800;
+}
+
+.delete-button {
+  background-color: #ff3300;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #cc2900;
+}
+
+/* صندوق البحث */
+.search-box input {
+  width: 300px;
+  max-width: 90%;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .add-item-form,
+  .search-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .styled-table {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+.suggestions-list {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 10;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestions-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.suggestions-list li:hover {
+  background-color: #f0f0f0;
+}
