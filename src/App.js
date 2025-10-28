@@ -1,3 +1,4 @@
+// src/App.jsx
 import React, { useState } from "react";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
@@ -5,9 +6,12 @@ import StockPage from "./pages/StockPage";
 import { FaArrowLeft } from "react-icons/fa";
 import "./GlobalStyles.css";
 
-// استيراد MainStore إذا موجود، وإلا عرض رسالة تحذير
+// الصفحات الفرعية
 import MainStoreModule from "./pages/MainStore";
+import IssuePageModule from "./pages/IssuePage";
+import IncomingPageModule from "./pages/IncomingPage"; // الوارد
 
+// fallback لو الملفات مش موجودة
 const MainStore = MainStoreModule
   ? MainStoreModule
   : () => (
@@ -16,16 +20,38 @@ const MainStore = MainStoreModule
       </div>
     );
 
+const IssuePage = IssuePageModule
+  ? IssuePageModule
+  : () => (
+      <div style={{ textAlign: "center", marginTop: "50px" }}>
+        <h2>IssuePage غير موجود 🚨</h2>
+      </div>
+    );
+
+const IncomingPage = IncomingPageModule
+  ? IncomingPageModule
+  : () => (
+      <div style={{ textAlign: "center", marginTop: "50px" }}>
+        <h2>IncomingPage غير موجود 🚨</h2>
+      </div>
+    );
+
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [selectedSection, setSelectedSection] = useState(null);
   const [selectedStockSection, setSelectedStockSection] = useState(null);
 
+  // تسجيل الدخول
   const handleLogin = () => setIsLoggedIn(true);
+
+  // اختيار قسم من الـ Dashboard
   const handleSelectSection = (sectionId) => setSelectedSection(sectionId);
+
+  // اختيار قسم من المخزن
   const handleSelectStockSection = (sectionId) =>
     setSelectedStockSection(sectionId);
 
+  // زر الرجوع
   const handleBack = () => {
     if (selectedStockSection) setSelectedStockSection(null);
     else if (selectedSection) setSelectedSection(null);
@@ -53,6 +79,10 @@ function App() {
               <StockPage onSelectStockSection={handleSelectStockSection} />
             ) : selectedStockSection === "main" ? (
               <MainStore />
+            ) : selectedStockSection === "out" ? (
+              <IssuePage />
+            ) : selectedStockSection === "in" ? (
+              <IncomingPage />
             ) : (
               <div style={{ textAlign: "center", marginTop: "50px" }}>
                 <h2>تم اختيار: {selectedStockSection} ✅</h2>

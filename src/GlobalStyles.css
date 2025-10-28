@@ -177,3 +177,24 @@
 .suggestions-list li:hover {
   background-color: #f0f0f0;
 }
+/* للشاشات الصغيرة جدًا (موبايل) */
+@media (max-width: 480px) {
+  .add-item-form,
+  .search-box {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .add-button,
+  .edit-button,
+  .delete-button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
