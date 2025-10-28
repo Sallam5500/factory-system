@@ -6,6 +6,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+<<<<<<< HEAD
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+>>>>>>> 350325d8e15b32a7db7a380c842fdc5ef847a422
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

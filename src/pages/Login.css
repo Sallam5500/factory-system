@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 .login-page {
+=======
+/* Login.css */
+.login-container {
+>>>>>>> 350325d8e15b32a7db7a380c842fdc5ef847a422
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+<<<<<<< HEAD
   background: linear-gradient(135deg, #002f4b, #005f73);
 }
 
@@ -52,4 +58,42 @@
   color: #ffb703;
   font-size: 14px;
   margin-bottom: 10px;
+=======
+  background: linear-gradient(to right, #2c3e50, #3498db);
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 320px;
+}
+
+.login-box h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #27ae60;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+>>>>>>> 350325d8e15b32a7db7a380c842fdc5ef847a422
 }

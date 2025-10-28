@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .back-button {
   position: fixed;
   top: 20px;
@@ -66,10 +67,58 @@
   border: none;
   border-radius: 5px;
   padding: 8px 15px;
+=======
+/* GlobalStyles.css */
+
+/* خلفية متدرجة */
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* حاويات الصفحات */
+.page-container {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  width: 95%;
+  max-width: 600px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* العناوين */
+.page-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #facc15;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* الأزرار */
+button {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 8px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+>>>>>>> 350325d8e15b32a7db7a380c842fdc5ef847a422
   cursor: pointer;
   transition: 0.3s;
 }
 
+<<<<<<< HEAD
 .add-button:hover {
   background-color: #005fa3;
 }
@@ -183,10 +232,172 @@
   .search-box {
     width: 100%;
     padding: 0 10px;
+=======
+button:hover {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  transform: scale(1.05);
+}
+
+/* الجداول */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.styled-table th, 
+.styled-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.styled-table th {
+  background: rgba(255, 255, 255, 0.2);
+  color: #facc15;
+  font-size: 16px;
+}
+
+.styled-table tr:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* حقول الإدخال */
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  font-size: 15px;
+}
+
+input::placeholder {
+  color: #ddd;
+}
+
+/* أنيميشن الدخول */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  justify-items: center;
+}
+
+.home-card {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 300px;
+}
+
+.home-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* للموبايل أصغر من 600px */
+@media (max-width: 600px) {
+  .cards-container {
+    grid-template-columns: 1fr; /* كارت واحد في الصف */
+  }
+}
+
+.text-center{
+    text-align: center;
+}
+/* Responsive الجدول */
+.factory-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.styled-table {
+  width: 98%; /* ياخد تقريبًا كامل عرض الصفحة */
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  margin-top: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.styled-table thead th {
+  background: rgba(255,255,255,0.15);
+  color: white;
+  padding: 18px 25px; /* خلايا أكبر */
+  text-align: center;
+  font-size: 1.4rem; /* أكبر للعرض */
+}
+
+.styled-table tbody tr {
+  background: rgba(255,255,255,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.styled-table tbody tr:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.styled-table td {
+  padding: 18px 25px; /* خلايا أكبر */
+  text-align: center;
+  font-size: 1.2rem; /* أكبر للعرض */
+}
+
+.styled-table input {
+  width: 100px; /* أكبر ليكون واضح */
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: border-color 0.2s;
+}
+
+.styled-table input:focus {
+  border-color: #fff;
+  outline: none;
+}
+
+/* Responsive للموبايل */
+@media (max-width: 768px) {
+  .styled-table {
+    width: 100%;
+>>>>>>> 350325d8e15b32a7db7a380c842fdc5ef847a422
   }
 
   .styled-table th,
   .styled-table td {
+<<<<<<< HEAD
     padding: 6px;
     font-size: 12px;
   }
@@ -198,3 +409,18 @@
     font-size: 12px;
   }
 }
+=======
+    padding: 12px 10px;
+    font-size: 16px;
+  }
+
+  .styled-table input {
+    width: 70px;
+    padding: 5px;
+  }
+}
+
+
+  
+
+>>>>>>> 350325d8e15b32a7db7a380c842fdc5ef847a422
